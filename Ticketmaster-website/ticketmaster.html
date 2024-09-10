@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ticketmaster API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="ticketmaster.css"> <!-- my css style sheet -->
+</head>
+<body>
+
+<!-- CONTAINER for TICKETMASTER and buttons (BLUE)-->
+<div class="container-fluid bg-primary text-center text-light p-5">
+    <!-- heading and title -->
+    <div class="row">
+        <h1 class="display-4">Ticketmaster</h1>
+        <h1 class="display-6 fw-bold"> Quickly find tickets around you</h1>
+    </div>
+    <!-- search bars and button -->
+    <div class="input-group container mt-3">
+        <input type="text" class="form-control" placeholder="Search by genre, artist or event"
+               aria-label="Recipient's username"
+               id="search-event" value="music">
+        <input type="text" class="form-control" placeholder="Enter a city e.g., Hartford"
+               aria-label="Recipient's username"
+               id="search-city" value="hartford">
+        <!-- button -->
+        <button onClick="showContainer()" class="btn btn-danger" type="button" id="search-button">SEARCH</button>
+    </div>
+    <div class="container" id="header"></div>
+</div> <!-- end container -->
+
+<!-- CONTAINER for cards-->
+<div id="shadow" class="container shadow-lg mt-4 p-4 bg-white" style="display:none">
+    <div class="pt-4 text-secondary" id="eventNum"></div>
+    <div class="row">
+        <div class="col-12">
+            <div id="result"></div>
+            <div id="noResult"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/ticketmaster.js"></script> <!-- my js file -->
+</body>
+</html>

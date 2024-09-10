@@ -1,0 +1,51 @@
+body {
+    /* make background slightly darker than the white container */
+    background-color: whitesmoke;
+    /* make cares always 100% width */
+    .card {
+        width: 100%;
+    }
+}
+
+/* apply stacking for extra-large screens */
+@media (min-width: 1200px) {
+/* make full when small screen */
+    #images{
+        margin-left: 5px;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media (max-width: 1680px) {
+    #images{
+        margin-top: 12%;
+        width: 100%;
+        height: auto;
+    }
+
+}
+/* apply stacking for medium screens */
+@media (max-width: 1000px ) {
+/* make full when small screen */
+    #images{
+        margin-left: 5px;
+        margin-top: 45%;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+/* media query for smaller screens */
+@media (max-width: 768px) {
+    /* make full when small screen */
+    #images{
+        padding: 4px; !important;
+        height: 300px; !important;
+        width: 680px; !important;
+        margin: 0;
+    }
+}
